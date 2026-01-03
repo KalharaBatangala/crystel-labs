@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       colors: {
         navbarBg: "var(--color-navbar-bg)",
+        sectionBg: "var(--color-section-bg)",
         textPrimary: "var(--color-text-primary)",
+        headingColor: "var(--color-heading)",
         textSecondary: "var(--color-text-secondary)",
       },
       cursor:{

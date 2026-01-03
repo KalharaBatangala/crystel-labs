@@ -1,6 +1,9 @@
 import Link from "next/link";
 
+
+
 export default function Navbar() {
+  
   return (
     <header className="fixed top-0 w-full bg-navbarBg backdrop-blur border-b border-zinc-800 ">
       <nav className=" left-0 w-full z-50 mx-auto max-w-7xl px-6 h-16 flex items-center ">
@@ -9,18 +12,19 @@ export default function Navbar() {
         <div className="flex-1">
           <span className="text-lg font-bold tracking-tight">
             <img src="crystal-3d.png" style={{maxWidth:"32px", height:"32px"}} alt="crystel-logo" />
+            
           </span>
         </div>
 
         {/* Center: Navigation */}
         <div className="hidden md:flex gap-8">
-          <Link href="/" className="font-roboto-slab text-textPrimary hover:text-white transition hover:cursor-custom-pointer">
+          <Link href="/" className="font-roboto-slab text-textPrimary transition hover:cursor-custom-pointer nav-link">
             Home
           </Link>
-          <Link href="/services" className="font-roboto-slab text-textPrimary hover:text-white transition hover:cursor-custom-pointer">
+          <Link href="/services" className="font-roboto-slab text-textPrimary transition hover:cursor-custom-pointer nav-link">
             Services
           </Link>
-          <Link href="/about" className="font-roboto-slab text-textPrimary hover:text-white transition hover:cursor-custom-pointer">
+          <Link href="/about" className="font-roboto-slab text-textPrimary  transition hover:cursor-custom-pointer nav-link">
             About
           </Link>
         </div>

@@ -8,10 +8,12 @@
 :root {
   /* Brand UI Colors */
   --color-navbar-bg: #f2f2f2;
+  --color-section-bg: #f2f2f2;
   --background: #f2f2f2;
   --foreground: #171717;
   --color-text-primary: blue;
   --color-text-secondary: blue;
+  --color-heading: black;
   --font-roboto-slab: 'Roboto Slab';
 }
 
@@ -48,3 +50,18 @@ p {
   margin-bottom: 1rem;
   
 }
+
+/* Navbar styles */
+.nav-link {
+  @apply relative font-roboto-slab text-textPrimary transition;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute left-0 -bottom-1 h-[2px] w-full bg-textPrimary scale-x-0 origin-center transition-transform duration-300;
+}
+
+.nav-link:hover::after {
+  @apply scale-x-100;
+}
+
