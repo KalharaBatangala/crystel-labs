@@ -10,8 +10,6 @@ const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
 });
 
-// test 1
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,7 +21,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Crytel Labs | Home",
+  title: {
+    default: "Crystel Labs | Home",
+    template: "Crystel Labs | %s",
+  },
   description: "Helping businesses | Creating Values",
 };
 
@@ -36,7 +37,7 @@ export default function RootLayout({
     <html lang="en">
       
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${robotoSlab.variable} antialiased`}
       >
         <Navbar />
        <main className="pt-16 mt-2"> {children}</main>

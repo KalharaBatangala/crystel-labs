@@ -65,3 +65,23 @@ p {
   @apply scale-x-100;
 }
 
+/* Signature dashed crystal card (same look as the home page cards) */
+.crystal-card {
+  @apply border-2 border-blue-700 border-dashed p-4 transition duration-300;
+}
+
+.crystal-card:hover {
+  @apply -translate-y-1 bg-white/60 shadow-[0_8px_24px_-12px_rgba(29,78,216,0.35)];
+}
+
+/* Small label above section headings */
+.eyebrow {
+  @apply font-roboto-slab text-sm uppercase tracking-widest text-textPrimary;
+}
+
+/* Use the custom typing cursor inside text fields */
+input,
+textarea {
+  @apply cursor-custom-type;
+}
+
